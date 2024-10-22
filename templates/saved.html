@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+saved_tweet
+{% endblock title %}
+
+{% block body %}
+
+<center>    
+    <h1>welcome to save page </h1>
+    
+
+      
+</center> 
+    
+{%for tweet in tweets%}
+<div class="card" style="width: 18rem; display: inline-block;">
+  <img src="{{tweet.tweet.photo.url}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{tweet.tweet.username.username}}</h5>
+    <p class="card-text">{{tweet.tweet.text}}</p>
+   
+    <a href="{%url 'save' tweet.tweet.pk %}"><i class="fa fa-bookmark" aria-hidden="true"></i></a>    
+    
+   
+  </div>
+</div>
+{%endfor%}
+
+
+    
+
+    
+
+{% endblock body %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+comment
+{% endblock title %}
+
+{% block body %}
+
+<center>    
+    <h1>welcome to comment page {{TO.username.username}} </h1>  
+   <form  method="post">
+    {%csrf_token%}
+     <label for="comment">comment</label>
+     <textarea name="comment" id="" cols="30" rows="10"></textarea> <br><br>
+ 
+    <input type="submit" value="comment">
+   </form>
+</center> 
+   
+    
+    
+
+{% endblock body %}

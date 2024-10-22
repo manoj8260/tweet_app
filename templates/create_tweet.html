@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+create_tweet
+{% endblock title %}
+
+{% block body %}
+<center>
+    <h1>create_tweet {{UO.username}}</h1>
+   <form  method="post" enctype="multipart/form-data">
+    {%csrf_token%}
+    {{ETFO.as_p}}
+    <input type="submit" value="create tweet">
+   </form>
+</center>
+
+{% endblock body %}
